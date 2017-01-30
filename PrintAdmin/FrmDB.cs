@@ -11,11 +11,19 @@ using System.Windows.Forms;
 
 namespace PrintAdmin
 {
-    public partial class Home : MetroForm
+    public partial class FrmDB : MetroForm
     {
-        public Home()
+        public FrmDB()
         {
             InitializeComponent();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FrmHome frmHome = new FrmHome();
+            this.Hide();
+            frmHome.ShowDialog();
+            this.Close();
         }
     }
 }

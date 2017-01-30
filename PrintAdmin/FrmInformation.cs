@@ -11,24 +11,18 @@ using System.Windows.Forms;
 
 namespace PrintAdmin
 {
-    public partial class Login : MetroForm
+    public partial class FrmInformation : MetroForm
     {
-        public Login()
+        public FrmInformation()
         {
             InitializeComponent();
-            InitializeMyControls();
         }
 
-        public void InitializeMyControls()
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            txtPassword.PasswordChar = '*';
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            Home home = new PrintAdmin.Home();
+            FrmHome frmHome = new FrmHome();
             this.Hide();
-            home.ShowDialog();
+            frmHome.ShowDialog();
             this.Close();
         }
     }
