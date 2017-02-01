@@ -9,22 +9,22 @@ namespace Entities
 {
     public class Order
     {
-        DateTime Date { get; set; }
-        int Id { get; set; }
-        DateTime Delivery { get; set; }
-        string DeliveredBy { get; set; }
-        string Computer { get; set; }
-        bool Type { get; set; }
-        int Quantity { get; set; }
-        string Ink { get; set; }
-        ArrayList Numbers { get; set; }
-        string Size { get; set; }
-        string Glued { get; set; }
-        string Perforated { get; set; }
-        string Hole { get; set; }
-        int InitialNum { get; set; }
-        int EndNum { get; set; }
-        string observations { get; set; }
-        string PSDFILE { get; set; }
+        public DateTime Date { get; set; }
+        public int Id { get; set; }
+        public DateTime Delivery { get; set; }
+        public string DeliveredBy { get; set; }
+        public string Computer { get; set; }
+        public bool Type { get; set; }
+        public int Quantity { get; set; }
+        public string Ink { get; set; }
+        public ArrayList Numbers { get; set; }
+        public string Size { get; set; }
+        public string Glued { get; set; }
+        public string Perforated { get; set; }
+        public string Hole { get; set; }
+        public int InitialNum { get; set; }
+        public int EndNum { get; set; }
+        public string observations { get; set; }
+        public string PSDFILE { get; set; }
     }
 }

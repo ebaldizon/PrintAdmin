@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.brnLogin = new MetroFramework.Controls.MetroButton();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,21 +37,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnPassword = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // brnLogin
             // 
-            this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.metroButton1.Location = new System.Drawing.Point(167, 3);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(172, 31);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Iniciar Sesión";
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.brnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.brnLogin.Location = new System.Drawing.Point(167, 3);
+            this.brnLogin.Name = "brnLogin";
+            this.brnLogin.Size = new System.Drawing.Size(172, 31);
+            this.brnLogin.TabIndex = 4;
+            this.brnLogin.Text = "Iniciar Sesión";
+            this.brnLogin.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // txtPassword
             // 
@@ -78,7 +78,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.Controls.Add(this.metroButton1);
+            this.panel1.Controls.Add(this.brnLogin);
             this.panel1.Location = new System.Drawing.Point(23, 355);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 39);
@@ -125,22 +125,22 @@
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.metroButton2);
+            this.panel4.Controls.Add(this.btnPassword);
             this.panel4.Location = new System.Drawing.Point(23, 400);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(513, 39);
             this.panel4.TabIndex = 11;
             // 
-            // metroButton2
+            // btnPassword
             // 
-            this.metroButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.metroButton2.Location = new System.Drawing.Point(167, 3);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(172, 31);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Olvide mi contraseña";
+            this.btnPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPassword.Location = new System.Drawing.Point(167, 3);
+            this.btnPassword.Name = "btnPassword";
+            this.btnPassword.Size = new System.Drawing.Size(172, 31);
+            this.btnPassword.TabIndex = 4;
+            this.btnPassword.Text = "Olvide mi contraseña";
             // 
-            // Login
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,7 +152,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
-            this.Name = "Login";
+            this.Name = "FrmLogin";
             this.Text = "Login";
             this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.panel1.ResumeLayout(false);
@@ -164,7 +164,7 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton brnLogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Panel panel1;
@@ -173,6 +173,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnPassword;
     }
 }

@@ -9,11 +9,11 @@ namespace Entities
 {
     public class Invoice
     {
-        int Number { get; set; }
-        int Id { get; set; }
-        ArrayList Orders { get; set; }
-        double Subtotal { get; set; }
-        double Tax { get; set; }
-        double Total { get; set; }
+        public int Number { get; set; }
+        public int Id { get; set; }
+        public ArrayList Orders { get; set; }
+        public double Subtotal { get; set; }
+        public double Tax { get; set; }
+        public double Total { get; set; }
     }
 }

@@ -1,0 +1,15 @@
+
+/******* USERS **********/
+INSERT
+insert into Users(id, name, lastname, email, password)
+values(0, '', '', '', '');
+
+SELECT
+select * from Users
+where (id=()) or (name = '') or (lastname = '') or (email = '') or (password ='')
+
+UPDATE
+update Users
+set name = '', lastname = '', email='', password = ''
+where id = ()
+

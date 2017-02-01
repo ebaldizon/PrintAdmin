@@ -8,9 +8,9 @@ namespace Entities
 {
     public class Customer
     {
-        int Id { get; set; }
-        string Name { get; set; }
-        int Telephone { get; set; }
-        string Mail { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Telephone { get; set; }
+        public string Mail { get; set; }
     }
 }

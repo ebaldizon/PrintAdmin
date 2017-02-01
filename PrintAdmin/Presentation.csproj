@@ -169,7 +169,16 @@
     <None Include="IMG\guardar-respaldo-db.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{e8d50a92-50d2-4167-a9a3-b6f67fc2d292}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{041824bd-f50e-4f3c-8f80-75a5eb76175c}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
