@@ -13,3 +13,7 @@ update Users
 set name = '', lastname = '', email='', password = ''
 where id = ()
 
+/******* Customers *********/
+
+SELECT
+select  * from Customers where (id = 0) or (name like '') or (telephone1 =(0)) or (telephone2 =(0)) or (email =(''))

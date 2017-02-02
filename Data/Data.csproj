@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerDa.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDa.cs" />

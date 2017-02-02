@@ -1,47 +1,41 @@
 ﻿using Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Data
 {
-    public class UserDa
+    public class CustomerDa
     {
-        public bool create(User user)
+        public bool create(Customer customer)
         {
             try
-            { 
+            {
                 DB db = new DB();
-                string query = @"insert into Users(id, name, lastname, email, password)values('"+ user.Id+"', '"+ user.Name+"', '"+ user.Lastname+"', '"+user.Mail+"', '"+user.Password+"')";
+                string query = @"insert into Customers(id, name, telephone1, telephone2, email)values('" + customer.Id + "', '" + customer.Name + "', '" + customer.Telephone1 + "', '" + customer.Telephone2 + "', '" + customer.Email + "')";
                 return db.executeQuery(query);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return false;
             }
         }
 
-        public DataTable read(User readUser)
+        public DataTable read(Customer customer)
         {
             try
             {
                 DB db = new DB();
-                string query = "select * from Users where id = (" + readUser.Id + ")" + 
-                    "OR (name LIKE '" + readUser.Name + "')"+
-                    "OR (lastname LIKE '" + readUser.Lastname + "')" +
-                    "OR (email LIKE '" + readUser.Mail + "')" +
-                    "OR (password LIKE '" + readUser.Password + "')";
-
+                
+                string query = "select  * from Customers where (id = ("+ customer.Id +")) or (name like '"+ customer.Name +"') or (telephone1 =("+ customer.Telephone1+")) or (telephone2 =("+ customer.Telephone2 +")) or (email =('"+ customer.Email+"'))";
                 DataTable dt = db.executeReadQuery(query);
 
                 if (dt.Rows[0]["id"].ToString() != "")
                 {
-
+                   
                     return dt;
                 }
                 else
@@ -55,13 +49,13 @@ namespace Data
             }
         }
 
-        public bool update(User user)
+        public bool update(Customer customer)
         {
             try
             {
                 DB db = new DB();
                 db.connection();
-                string query = "update Users set name = '" + user.Name + "', lastname = '"+ user.Lastname +"', email = '"+ user.Mail +"', password = '"+ user.Password +"' where id = ("+ user.Id +")";
+                string query = "update Customers set name = '" + customer.Name + "', telephone1 = (" + customer.Telephone1 + "), telephone2 = (" + customer.Telephone2 + "), email = '" + customer.Email + "' where id = (" + customer.Id + ")";
                 return db.executeQuery(query);
             }
             catch (Exception e)
@@ -70,16 +64,16 @@ namespace Data
             }
         }
 
-        public bool delete(User readUser)
+        public bool delete(Customer customer)
         {
             try
             {
                 DB db = new DB();
-                string query = "DELETE FROM Users WHERE id = (" + readUser.Id + ")" +
-                    "AND (name LIKE '" + readUser.Name + "')" +
-                    "AND (lastname LIKE '" + readUser.Lastname + "')" +
-                    "AND (email LIKE '" + readUser.Mail + "')" +
-                    "AND (password LIKE '" + readUser.Password + "')";
+                string query = "DELETE FROM Customers WHERE id = (" + customer.Id + ")" +
+                    "AND (name LIKE '" + customer.Name + "')" +
+                    "AND (telephone1 = (" + customer.Telephone1 + "))" +
+                    "AND (telephone2 = (" + customer.Telephone2 + "))" +
+                    "AND (email LIKE '" + customer.Email + "')";
 
                 return db.executeQuery(query);
             }
@@ -89,12 +83,12 @@ namespace Data
             }
         }
 
-        public DataTable listUsers()
+        public DataTable listCustomers()
         {
             try
             {
                 DB db = new DB();
-                string query = "select * from Users";
+                string query = "select * from Customers";
                 DataTable dt = db.executeReadQuery(query);
                 return dt;
             }
@@ -103,6 +97,5 @@ namespace Data
                 return null;
             }
         }
-
     }
 }

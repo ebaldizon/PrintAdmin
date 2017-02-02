@@ -41,6 +41,7 @@ namespace PrintAdmin
         {
             UserBus userBus = new UserBus();
             DataTable dt = userBus.read(txtId.Text, txtName.Text, txtLastname.Text, txtMail.Text, txtPassword.Text, txtRepeatPassword.Text);
+
             if(dt != null)
             {
                 dt.Columns["id"].ColumnName = "Cédula";

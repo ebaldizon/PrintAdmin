@@ -10,7 +10,8 @@ namespace Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Telephone { get; set; }
-        public string Mail { get; set; }
+        public int Telephone1 { get; set; }
+        public int Telephone2 { get; set; }
+        public string Email { get; set; }
     }
 }
