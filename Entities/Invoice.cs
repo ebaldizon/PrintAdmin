@@ -9,8 +9,8 @@ namespace Entities
 {
     public class Invoice
     {
-        public int Number { get; set; }
-        public int Id { get; set; }
+        public int InvoiceNumber { get; set; }
+        public int CustomerID { get; set; }
         public ArrayList Orders { get; set; }
         public double Subtotal { get; set; }
         public double Tax { get; set; }

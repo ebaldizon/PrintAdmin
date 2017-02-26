@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using Business;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,10 +27,21 @@ namespace PrintAdmin
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            FrmHome frmHome = new PrintAdmin.FrmHome();
-            this.Hide();
-            frmHome.ShowDialog();
-            this.Close();
+
+            UserBus userBus = new UserBus();
+            if(userBus.login(txtUser.Text, txtPassword.Text))
+            {
+                FrmHome frmHome = new PrintAdmin.FrmHome();
+                this.Hide();
+                frmHome.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrecto", "PrintAdmin");
+            }
+
+            
         }
     }
 }

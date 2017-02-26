@@ -49,6 +49,31 @@ namespace Data
             }
         }
 
+        public DataTable readForId(long id)
+        {
+            try
+            {
+                DB db = new DB();
+
+                string query = "select * from Customers where id = ("+ id +")";
+                DataTable dt = db.executeReadQuery(query);
+
+                if (dt.Rows[0]["id"].ToString() != "")
+                {
+
+                    return dt;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
         public bool update(Customer customer)
         {
             try

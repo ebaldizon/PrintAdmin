@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>network-64.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
@@ -157,6 +160,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="network-64.ico" />
     <None Include="Resources\atras.PNG" />
     <None Include="Resources\logotipo.jpg" />
     <None Include="IMG\clientes.PNG" />
@@ -167,6 +171,8 @@
     <None Include="IMG\usuarios.PNG" />
     <None Include="IMG\cargar-respaldo.png" />
     <None Include="IMG\guardar-respaldo-db.png" />
+    <None Include="IMG\separador.png" />
+    <None Include="IMG\horizontal-bar.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>

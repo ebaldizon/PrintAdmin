@@ -28,33 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDB));
+            this.btnDownloadDB = new System.Windows.Forms.Button();
+            this.btnUploadDB = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // button1
+            // btnDownloadDB
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(106, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 28);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Descargar Respaldo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDownloadDB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownloadDB.Location = new System.Drawing.Point(106, 303);
+            this.btnDownloadDB.Name = "btnDownloadDB";
+            this.btnDownloadDB.Size = new System.Drawing.Size(192, 28);
+            this.btnDownloadDB.TabIndex = 0;
+            this.btnDownloadDB.Text = "Descargar Respaldo";
+            this.btnDownloadDB.UseVisualStyleBackColor = true;
+            this.btnDownloadDB.Click += new System.EventHandler(this.btnDownloadDB_Click);
             // 
-            // button2
+            // btnUploadDB
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(332, 303);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 28);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cargar Respaldo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUploadDB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUploadDB.Location = new System.Drawing.Point(332, 303);
+            this.btnUploadDB.Name = "btnUploadDB";
+            this.btnUploadDB.Size = new System.Drawing.Size(192, 28);
+            this.btnUploadDB.TabIndex = 1;
+            this.btnUploadDB.Text = "Cargar Respaldo";
+            this.btnUploadDB.UseVisualStyleBackColor = true;
+            this.btnUploadDB.Click += new System.EventHandler(this.btnUploadDB_Click);
             // 
             // panel1
             // 
@@ -102,9 +105,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUploadDB);
+            this.Controls.Add(this.btnDownloadDB);
             this.Controls.Add(this.btnBack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDB";
             this.Text = "Base de Datos";
             this.ResumeLayout(false);
@@ -114,8 +118,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDownloadDB;
+        private System.Windows.Forms.Button btnUploadDB;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

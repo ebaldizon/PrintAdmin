@@ -104,5 +104,30 @@ namespace Data
             }
         }
 
+        public bool login(User user)
+        {
+            try
+            {
+                DB db = new DB();
+                string query = "select * from Users where id = ("+ user.Id +") and password = '"+ user.Password +"'";
+
+                DataTable dt = db.executeReadQuery(query);
+
+                if (dt.Rows[0]["id"].ToString() != "")
+                {
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
     }
 }

@@ -133,6 +133,16 @@ namespace PrintAdmin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap horizontal_bar {
+            get {
+                object obj = ResourceManager.GetObject("horizontal_bar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logotipo {
             get {
                 object obj = ResourceManager.GetObject("logotipo", resourceCulture);
@@ -146,6 +156,16 @@ namespace PrintAdmin.Properties {
         internal static System.Drawing.Bitmap ordenes {
             get {
                 object obj = ResourceManager.GetObject("ordenes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap separador {
+            get {
+                object obj = ResourceManager.GetObject("separador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

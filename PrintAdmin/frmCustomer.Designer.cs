@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomer));
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTelephone2 = new System.Windows.Forms.TextBox();
@@ -62,7 +63,7 @@
             this.btnBack.Location = new System.Drawing.Point(114, 11);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(55, 48);
-            this.btnBack.TabIndex = 0;
+            this.btnBack.TabIndex = 4;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -90,7 +91,7 @@
             this.txtTelephone2.Location = new System.Drawing.Point(118, 170);
             this.txtTelephone2.Name = "txtTelephone2";
             this.txtTelephone2.Size = new System.Drawing.Size(213, 27);
-            this.txtTelephone2.TabIndex = 9;
+            this.txtTelephone2.TabIndex = 3;
             // 
             // label1
             // 
@@ -108,7 +109,7 @@
             this.txtEmail.Location = new System.Drawing.Point(118, 220);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(213, 27);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TabIndex = 4;
             // 
             // label4
             // 
@@ -126,7 +127,7 @@
             this.txtTelephone1.Location = new System.Drawing.Point(118, 122);
             this.txtTelephone1.Name = "txtTelephone1";
             this.txtTelephone1.Size = new System.Drawing.Size(213, 27);
-            this.txtTelephone1.TabIndex = 5;
+            this.txtTelephone1.TabIndex = 2;
             // 
             // label3
             // 
@@ -144,7 +145,7 @@
             this.txtName.Location = new System.Drawing.Point(118, 72);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(213, 27);
-            this.txtName.TabIndex = 3;
+            this.txtName.TabIndex = 1;
             // 
             // label2
             // 
@@ -162,7 +163,7 @@
             this.txtId.Location = new System.Drawing.Point(118, 28);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(213, 27);
-            this.txtId.TabIndex = 1;
+            this.txtId.TabIndex = 0;
             // 
             // lblCedula
             // 
@@ -180,7 +181,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(218, 471);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(81, 27);
-            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Editar";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -191,7 +192,7 @@
             this.btnCreate.Location = new System.Drawing.Point(42, 471);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(81, 27);
-            this.btnCreate.TabIndex = 2;
+            this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "Agregar";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -202,7 +203,7 @@
             this.btnRead.Location = new System.Drawing.Point(130, 471);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(81, 27);
-            this.btnRead.TabIndex = 3;
+            this.btnRead.TabIndex = 1;
             this.btnRead.Text = "Buscar";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
@@ -213,7 +214,7 @@
             this.btnDelete.Location = new System.Drawing.Point(306, 471);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 27);
-            this.btnDelete.TabIndex = 5;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Borrar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -280,6 +281,7 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCustomer";
             this.Text = "Clientes";
             this.panel1.ResumeLayout(false);

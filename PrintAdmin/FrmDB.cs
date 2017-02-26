@@ -25,5 +25,15 @@ namespace PrintAdmin
             frmHome.ShowDialog();
             this.Close();
         }
+
+        private void btnDownloadDB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUploadDB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

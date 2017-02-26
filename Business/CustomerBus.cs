@@ -20,7 +20,7 @@ namespace Business
             if(generalValidator(id, name, telephone1, telephone2, email))
             {
                 Customer customer = new Customer();
-                customer.Id = Int32.Parse(id);
+                customer.Id = long.Parse(id);
                 customer.Name = name;
                 customer.Telephone1 = Int32.Parse(telephone1);
                 customer.Telephone2 = Int32.Parse(telephone2);
@@ -49,7 +49,7 @@ namespace Business
             if (generalValidator(id, name, telephone1, telephone2, email))
             {
                 Customer customer = new Customer();
-                customer.Id = Int32.Parse(id);
+                customer.Id = long.Parse(id);
                 customer.Name = name;
                 customer.Telephone1 = Int32.Parse(telephone1);
                 customer.Telephone2 = Int32.Parse(telephone2);
@@ -78,12 +78,19 @@ namespace Business
             return customerDa.read(customer);
         }
 
+        public DataTable readForId(string id)
+        {
+            CustomerDa customerDa = new CustomerDa();
+            long newID = convertInt(id);
+            return customerDa.readForId(newID);
+        }
+
         public string delete(string id, string name, string telephone1, string telephone2, string email)
         {
             if (generalValidator(id, name, telephone1, telephone2, email))
             {
                 Customer customer = new Customer();
-                customer.Id = Int32.Parse(id);
+                customer.Id = long.Parse(id);
                 customer.Name = name;
                 customer.Telephone1 = Int32.Parse(telephone1);
                 customer.Telephone2 = Int32.Parse(telephone2);
@@ -127,13 +134,13 @@ namespace Business
         private Customer  fillCustomers(string id, string name, string telephone1, string telephone2, string email)
         {
             Customer customer = new Customer();
-            if (CanConvert<Int32>(id) == false)
+            if (CanConvert<long>(id) == false)
             {
                 customer.Id = 0;
             }
             else
             {
-                customer.Id = Int32.Parse(id);
+                customer.Id = long.Parse(id);
             }
 
             if (CanConvert<Int32>(telephone1) == false)
@@ -217,7 +224,7 @@ namespace Business
             if (Regex.IsMatch(id, patternNumbers) == false)
             {
                 this.msgError = "Por favor use solamente números para el campo cédula";
-                return false;
+                return false;		 			
             }
             else if (Regex.IsMatch(telephone1, patternNumbers) == false)
             {
@@ -235,6 +242,16 @@ namespace Business
                 return false;
             }
             return true;
+        }
+
+        public long convertInt(string number)
+        {
+            string patternNumbers = "^(0|[1-9][0-9]*)$";
+            if (Regex.IsMatch(number, patternNumbers) != false)
+            {
+                return long.Parse(number);
+            }
+            return 0;
         }
 
         public bool CanConvert<T>(string data)

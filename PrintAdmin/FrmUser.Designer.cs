@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUser));
             this.btnBack = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,12 +56,12 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tableUsers = new System.Windows.Forms.DataGridView();
-            this.lblError = new System.Windows.Forms.Label();
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblError = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableUsers)).BeginInit();
             this.SuspendLayout();
@@ -112,7 +113,7 @@
             this.txtRepeatPassword.Location = new System.Drawing.Point(126, 217);
             this.txtRepeatPassword.Name = "txtRepeatPassword";
             this.txtRepeatPassword.Size = new System.Drawing.Size(234, 26);
-            this.txtRepeatPassword.TabIndex = 50;
+            this.txtRepeatPassword.TabIndex = 5;
             // 
             // label4
             // 
@@ -130,7 +131,7 @@
             this.txtId.Location = new System.Drawing.Point(128, 25);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(234, 26);
-            this.txtId.TabIndex = 48;
+            this.txtId.TabIndex = 0;
             // 
             // label1
             // 
@@ -148,7 +149,7 @@
             this.txtName.Location = new System.Drawing.Point(127, 62);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(234, 26);
-            this.txtName.TabIndex = 45;
+            this.txtName.TabIndex = 1;
             // 
             // label2
             // 
@@ -166,7 +167,7 @@
             this.txtLastname.Location = new System.Drawing.Point(127, 98);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(234, 26);
-            this.txtLastname.TabIndex = 43;
+            this.txtLastname.TabIndex = 2;
             // 
             // label3
             // 
@@ -184,7 +185,7 @@
             this.txtMail.Location = new System.Drawing.Point(127, 135);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(234, 26);
-            this.txtMail.TabIndex = 38;
+            this.txtMail.TabIndex = 3;
             // 
             // txtPassword
             // 
@@ -192,7 +193,7 @@
             this.txtPassword.Location = new System.Drawing.Point(127, 174);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(234, 26);
-            this.txtPassword.TabIndex = 41;
+            this.txtPassword.TabIndex = 4;
             // 
             // lblMail
             // 
@@ -220,7 +221,7 @@
             this.btnCreate.Location = new System.Drawing.Point(40, 452);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(94, 29);
-            this.btnCreate.TabIndex = 39;
+            this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "Agregar";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -231,7 +232,7 @@
             this.btnSearch.Location = new System.Drawing.Point(147, 452);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(94, 29);
-            this.btnSearch.TabIndex = 40;
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -242,7 +243,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(254, 452);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(94, 29);
-            this.btnUpdate.TabIndex = 41;
+            this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Editar";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -253,7 +254,7 @@
             this.btnDelete.Location = new System.Drawing.Point(361, 452);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 29);
-            this.btnDelete.TabIndex = 42;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Borrar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -280,19 +281,9 @@
             this.tableUsers.Location = new System.Drawing.Point(475, 163);
             this.tableUsers.Name = "tableUsers";
             this.tableUsers.Size = new System.Drawing.Size(543, 318);
-            this.tableUsers.TabIndex = 44;
+            this.tableUsers.TabIndex = 4;
             this.tableUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableUsers_CellClick);
             this.tableUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableUsers_CellClick);
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.Black;
-            this.lblError.Location = new System.Drawing.Point(159, 517);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 21);
-            this.lblError.TabIndex = 45;
             // 
             // Cedula
             // 
@@ -329,6 +320,16 @@
             this.Contraseña.HeaderText = "Contraseña";
             this.Contraseña.Name = "Contraseña";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Black;
+            this.lblError.Location = new System.Drawing.Point(159, 517);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 21);
+            this.lblError.TabIndex = 45;
+            // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +345,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUser";
             this.Text = "Usuarios";
             this.panel2.ResumeLayout(false);

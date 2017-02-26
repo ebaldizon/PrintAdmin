@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerBus.cs" />
+    <Compile Include="DesignBus.cs" />
+    <Compile Include="InvoiceBus.cs" />
+    <Compile Include="MixFileBus.cs" />
+    <Compile Include="OrderBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserBus.cs" />
   </ItemGroup>

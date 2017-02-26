@@ -13,7 +13,22 @@ update Users
 set name = '', lastname = '', email='', password = ''
 where id = ()
 
+LOGIN
+select * from Users where id = () and password = ''
+
 /******* Customers *********/
 
 SELECT
 select  * from Customers where (id = 0) or (name like '') or (telephone1 =(0)) or (telephone2 =(0)) or (email =(''))
+
+
+/****** INVOICES ***********/
+INSERT
+INSERT INTO Invoices(number, customerID , orderNum, subtotal, tax, total)
+VALUES(0, 0, 0, 0, 0, 0)
+
+UPDATE
+UPDATE Invoices SET customerID = , orderNum = , subtotal = , tax = , total= where number = 
+
+DELETE
+DELETE FROM Invoices WHERE (number = 2) AND (customerID = 3) AND (subtotal = 3) AND (tax = 3) AND (total=3)

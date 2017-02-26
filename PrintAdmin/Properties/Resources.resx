@@ -139,11 +139,17 @@
   <data name="guardar_respaldo_db" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\guardar-respaldo-db.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="horizontal_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\horizontal-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logotipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logotipo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ordenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\ordenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="separador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\separador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\usuarios.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

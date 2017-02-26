@@ -20,7 +20,7 @@ namespace Business
             if(generalValidator(id, name, lastname, mail, password, confirmPassword))
             {
                 User user = new User();
-                user.Id = Int32.Parse(id);
+                user.Id = long.Parse(id);
                 user.Name = name;
                 user.Lastname = lastname;
                 user.Mail = mail;
@@ -71,7 +71,7 @@ namespace Business
             if (generalValidator(id, name, lastname, mail, password, confirmPassword))
             {
                 User user = new User();
-                user.Id = Int32.Parse(id);
+                user.Id = long.Parse(id);
                 user.Name = name;
                 user.Lastname = lastname;
                 user.Mail = mail;
@@ -95,7 +95,7 @@ namespace Business
             if (generalValidator(id, name, lastname, mail, password, confirmPassword))
             {
                 User user = new User();
-                user.Id = Int32.Parse(id);
+                user.Id = long.Parse(id);
                 user.Name = name;
                 user.Lastname = lastname;
                 user.Mail = mail;
@@ -134,6 +134,21 @@ namespace Business
             }
         }
 
+        public bool login(string id, string password)
+        {
+            User user = new User();
+            UserDa userDa = new UserDa();
+
+
+            if (CanConvert<long>(id) == true)
+            {
+                user.Id = long.Parse(id);
+                user.Password = password;
+                return userDa.login(user);
+            }
+            return false;
+        }
+
         private bool generalValidator(string id, string name, string lastname, string mail, string password, string confirmPassword)
         {
             if(emptyValidator(id, name, lastname, mail, password, confirmPassword) == false)
@@ -158,13 +173,13 @@ namespace Business
         {
             User user = new User();
 
-            if (CanConvert<Int32>(id) == false)
+            if (CanConvert<long>(id) == false)
             {
                 user.Id = 0;
             }
             else
             {
-                user.Id = Int32.Parse(id);
+                user.Id = long.Parse(id);
             }
             user.Name = name;
             user.Lastname = lastname;
@@ -253,7 +268,7 @@ namespace Business
 
         private bool charactersValidator(string id, string name, string lastname, string mail, string password)
         {
-            if (CanConvert<Int32>(id) == false)
+            if (CanConvert<long>(id) == false)
             {
                 this.msgError = "Por favor ingrese un número de cédula valido";
                 return false;

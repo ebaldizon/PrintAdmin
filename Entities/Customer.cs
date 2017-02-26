@@ -8,7 +8,7 @@ namespace Entities
 {
     public class Customer
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public int Telephone1 { get; set; }
         public int Telephone2 { get; set; }

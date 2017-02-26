@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.brnLogin = new MetroFramework.Controls.MetroButton();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -37,10 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnPassword = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // brnLogin
@@ -49,7 +48,7 @@
             this.brnLogin.Location = new System.Drawing.Point(167, 3);
             this.brnLogin.Name = "brnLogin";
             this.brnLogin.Size = new System.Drawing.Size(172, 31);
-            this.brnLogin.TabIndex = 4;
+            this.brnLogin.TabIndex = 0;
             this.brnLogin.Text = "Iniciar Sesión";
             this.brnLogin.Click += new System.EventHandler(this.metroButton1_Click);
             // 
@@ -59,10 +58,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(105, 305);
+            this.txtPassword.Location = new System.Drawing.Point(143, 305);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(357, 26);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.Size = new System.Drawing.Size(334, 26);
+            this.txtPassword.TabIndex = 1;
             // 
             // txtUser
             // 
@@ -70,10 +69,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(105, 261);
+            this.txtUser.Location = new System.Drawing.Point(143, 261);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(357, 26);
-            this.txtUser.TabIndex = 5;
+            this.txtUser.Size = new System.Drawing.Size(334, 26);
+            this.txtUser.TabIndex = 0;
             // 
             // panel1
             // 
@@ -106,7 +105,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 264);
+            this.label1.Location = new System.Drawing.Point(38, 267);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 9;
@@ -115,30 +114,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 314);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 311);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.Size = new System.Drawing.Size(99, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Contraseña:";
             // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.btnPassword);
             this.panel4.Location = new System.Drawing.Point(23, 400);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(513, 39);
             this.panel4.TabIndex = 11;
-            // 
-            // btnPassword
-            // 
-            this.btnPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPassword.Location = new System.Drawing.Point(167, 3);
-            this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Size = new System.Drawing.Size(172, 31);
-            this.btnPassword.TabIndex = 4;
-            this.btnPassword.Text = "Olvide mi contraseña";
             // 
             // FrmLogin
             // 
@@ -152,12 +141,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLogin";
             this.Text = "Login";
             this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +162,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private MetroFramework.Controls.MetroButton btnPassword;
     }
 }

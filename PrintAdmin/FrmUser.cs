@@ -21,6 +21,12 @@ namespace PrintAdmin
             listUsers();
         }
 
+        public void InitializeTextBoxs()
+        {
+            txtPassword.PasswordChar = '*';
+            txtRepeatPassword.PasswordChar = '*';
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             FrmHome frmHome = new FrmHome();
